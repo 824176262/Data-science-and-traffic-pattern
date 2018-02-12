@@ -1,0 +1,13 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
+
+df=pd.read_csv('~/Desktop/Corrected_big_matrix_occupancy.csv')
+df_BW= df['COLUMBUS AVE 1300']
+df_BW= df_BW.dropna(how='any')
+plt.figure()
+ax=df_BW.plot(figsize=(17, 6),title='parking occupancy')
+ax.set_xlabel('Time')
+plt.show()
+
